@@ -18,6 +18,8 @@ services:
       - DB_POSTGRESDB_USER=${DB_USER}
       - DB_POSTGRESDB_SCHEMA=public
       - DB_POSTGRESDB_PASSWORD=${DB_PASSWORD}
+      - GENERIC_TIMEZONE="Europe/Berlin"
+      - TZ="Europe/Berlin"
     volumes:
       - ../../n8n_data:/home/node/.n8n
     networks:
