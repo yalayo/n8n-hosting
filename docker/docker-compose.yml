@@ -12,7 +12,7 @@ services:
       - 5678:5678
     environment:
       - DB_TYPE=postgresdb
-      - DB_POSTGRESDB_DATABASE=${POSTGRES_DATABASE}
+      - DB_POSTGRESDB_DATABASE=n8n-db
       - DB_POSTGRESDB_HOST=${DB_HOST}
       - DB_POSTGRESDB_PORT=5432
       - DB_POSTGRESDB_USER=${DB_USER}
