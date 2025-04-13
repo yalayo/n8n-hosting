@@ -35,6 +35,7 @@ jobs:
         run: |  
           scp -r ./docker ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.WORK_DIR }}
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            chown -R 1000:1000 ~/n8n_data
             cd ~/${{ secrets.WORK_DIR }}/docker
             docker compose up -d
             exit
